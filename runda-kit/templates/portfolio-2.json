@@ -1,0 +1,640 @@
+{
+    "version": "0.4",
+    "title": "Portfolio 2",
+    "type": "page",
+    "metadata": {
+        "template_type": "single-page",
+        "include_in_zip": "1",
+        "elementor_pro_required": null,
+        "wp_page_template": "elementor_canvas"
+    },
+    "content": [
+        {
+            "id": "3b4d3d44",
+            "settings": {
+                "background_background": "classic",
+                "background_image": {
+                    "url": "https:\/\/kit.bagigambar.net\/runda\/wp-content\/uploads\/sites\/4\/2021\/04\/portrait-of-young-woman-with-long-black-hair-and-r-SNC8PT4_2.jpg",
+                    "id": 824
+                },
+                "background_position": "center center",
+                "background_size": "cover",
+                "padding": {
+                    "unit": "px",
+                    "top": "210",
+                    "right": "0",
+                    "bottom": "150",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "flex_direction": "row",
+                "flex_align_items": "stretch",
+                "flex_gap": {
+                    "size": 10,
+                    "column": "10",
+                    "row": "10",
+                    "unit": "px"
+                }
+            },
+            "elements": [
+                {
+                    "id": "44757a7e",
+                    "settings": {
+                        "_column_size": 100,
+                        "width": {
+                            "size": null,
+                            "unit": "%"
+                        },
+                        "content_width": "full"
+                    },
+                    "elements": [
+                        {
+                            "id": "159ea5b9",
+                            "settings": {
+                                "title": "PORTFOLIO",
+                                "header_size": "h1",
+                                "align": "center",
+                                "__globals__": {
+                                    "title_color": "globals\/colors?id=primary",
+                                    "typography_typography": "globals\/typography?id=03de200"
+                                },
+                                "_animation": "fadeInUp"
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "heading",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": true,
+                    "elType": "container"
+                }
+            ],
+            "isInner": false,
+            "elType": "container"
+        },
+        {
+            "id": "7117ecb5",
+            "settings": {
+                "boxed_width": {
+                    "unit": "px",
+                    "size": 1300,
+                    "sizes": []
+                },
+                "padding": {
+                    "unit": "px",
+                    "top": "100",
+                    "right": "0",
+                    "bottom": "150",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "padding_tablet": {
+                    "unit": "px",
+                    "top": "70",
+                    "right": "0",
+                    "bottom": "70",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "padding_mobile": {
+                    "unit": "px",
+                    "top": "50",
+                    "right": "0",
+                    "bottom": "70",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "flex_direction": "row",
+                "flex_align_items": "stretch",
+                "flex_gap": {
+                    "size": 10,
+                    "column": "10",
+                    "row": "10",
+                    "unit": "px"
+                }
+            },
+            "elements": [
+                {
+                    "id": "cc72a05",
+                    "settings": {
+                        "_column_size": 100,
+                        "width": {
+                            "size": null,
+                            "unit": "%"
+                        },
+                        "content_width": "full"
+                    },
+                    "elements": [
+                        {
+                            "id": "4518b754",
+                            "settings": {
+                                "title": "OUR PORTFOLIO",
+                                "align": "center",
+                                "__globals__": {
+                                    "title_color": "globals\/colors?id=text",
+                                    "typography_typography": "globals\/typography?id=primary"
+                                },
+                                "_animation": "fadeInUp"
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "heading",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "2fc1acb8",
+                            "settings": {
+                                "width": {
+                                    "unit": "%",
+                                    "size": 5,
+                                    "sizes": []
+                                },
+                                "text": "Divider",
+                                "weight": {
+                                    "unit": "px",
+                                    "size": 5,
+                                    "sizes": []
+                                },
+                                "gap": {
+                                    "unit": "px",
+                                    "size": 5,
+                                    "sizes": []
+                                },
+                                "align": "center",
+                                "width_tablet": {
+                                    "unit": "%",
+                                    "size": 8,
+                                    "sizes": []
+                                },
+                                "width_mobile": {
+                                    "unit": "%",
+                                    "size": 16,
+                                    "sizes": []
+                                },
+                                "__globals__": {
+                                    "color": "globals\/colors?id=accent"
+                                },
+                                "_animation": "fadeInUp",
+                                "_animation_delay": 200
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "divider",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "6a717431",
+                            "settings": {
+                                "title": "our works",
+                                "align": "center",
+                                "_margin": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "40",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "_border_width": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "5",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "_border_color": "#251AFF",
+                                "__globals__": {
+                                    "title_color": "globals\/colors?id=accent",
+                                    "typography_typography": "globals\/typography?id=accent"
+                                },
+                                "header_size": "h3",
+                                "_animation": "fadeInUp",
+                                "_animation_delay": 400
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "heading",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "7da0b64f",
+                            "settings": {
+                                "sg_setting_item_show": {
+                                    "unit": "px",
+                                    "size": 9,
+                                    "sizes": []
+                                },
+                                "sg_setting_grid": "masonry",
+                                "sg_setting_layout": "card",
+                                "sg_setting_link_to": "none",
+                                "sg_filter_enable": "yes",
+                                "sg_filter_all_label": "All",
+                                "sg_filter_list": [
+                                    {
+                                        "sg_filter_list_name": "Design",
+                                        "_id": "fa1ebf6"
+                                    },
+                                    {
+                                        "_id": "56b0de6",
+                                        "sg_filter_list_name": "Creative"
+                                    },
+                                    {
+                                        "_id": "95fe99f",
+                                        "sg_filter_list_name": "Branding"
+                                    },
+                                    {
+                                        "_id": "518bc52",
+                                        "sg_filter_list_name": "Photography"
+                                    },
+                                    {
+                                        "_id": "0fbc779",
+                                        "sg_filter_list_name": "UI\/UX"
+                                    }
+                                ],
+                                "sg_gallery_list": [
+                                    {
+                                        "sg_gallery_list_image": {
+                                            "url": "https:\/\/kit.bagigambar.net\/runda\/wp-content\/uploads\/sites\/4\/2021\/04\/matheus-ferrero-OsMwKgqSGWU-unsplash_3.jpg",
+                                            "id": 664
+                                        },
+                                        "_id": "c0e0997",
+                                        "sg_gallery_list_control_name": "Branding",
+                                        "sg_gallery_list_item_name": "Branding"
+                                    },
+                                    {
+                                        "sg_gallery_list_image": {
+                                            "url": "https:\/\/kit.bagigambar.net\/runda\/wp-content\/uploads\/sites\/4\/2021\/04\/mae-mu-GnWKTJlMYsQ-unsplash_2.jpg",
+                                            "id": 641
+                                        },
+                                        "_id": "d01193d",
+                                        "sg_gallery_list_control_name": "Design",
+                                        "sg_gallery_list_item_name": "Product Design"
+                                    },
+                                    {
+                                        "sg_gallery_list_image": {
+                                            "url": "https:\/\/kit.bagigambar.net\/runda\/wp-content\/uploads\/sites\/4\/2021\/04\/walling-52H5Nfi5WiE-unsplash_3.jpg",
+                                            "id": 666
+                                        },
+                                        "_id": "f82e39d",
+                                        "sg_gallery_list_control_name": "UI\/UX",
+                                        "sg_gallery_list_item_name": "App  Design"
+                                    },
+                                    {
+                                        "sg_gallery_list_image": {
+                                            "url": "https:\/\/kit.bagigambar.net\/runda\/wp-content\/uploads\/sites\/4\/2021\/04\/ian-dooley-y_CSTKJ0bEs-unsplash.jpg",
+                                            "id": 77
+                                        },
+                                        "_id": "cea8a3c",
+                                        "sg_gallery_list_control_name": "Photography",
+                                        "sg_gallery_list_item_name": "Abstract"
+                                    },
+                                    {
+                                        "sg_gallery_list_image": {
+                                            "url": "https:\/\/kit.bagigambar.net\/runda\/wp-content\/uploads\/sites\/4\/2021\/04\/milad-b-fakurian-0_8gAoFrzbw-unsplash.jpg",
+                                            "id": 81
+                                        },
+                                        "_id": "598668d",
+                                        "sg_gallery_list_control_name": "Creative",
+                                        "sg_gallery_list_item_name": "3D Illustration"
+                                    },
+                                    {
+                                        "_id": "d5cae25",
+                                        "sg_gallery_list_control_name": "Photography",
+                                        "sg_gallery_list_item_name": "Product Photography",
+                                        "sg_gallery_list_image": {
+                                            "url": "https:\/\/kit.bagigambar.net\/runda\/wp-content\/uploads\/sites\/4\/2021\/04\/melnychuk-nataliya-51sGDpm5S78-unsplash_3.jpg",
+                                            "id": 665
+                                        }
+                                    },
+                                    {
+                                        "_id": "09ed004",
+                                        "sg_gallery_list_control_name": "Branding",
+                                        "sg_gallery_list_item_name": "Branding Idea",
+                                        "sg_gallery_list_image": {
+                                            "url": "https:\/\/kit.bagigambar.net\/runda\/wp-content\/uploads\/sites\/4\/2021\/04\/jakob-owens-iYDtWGKZ-0Q-unsplash.jpg",
+                                            "id": 78
+                                        }
+                                    },
+                                    {
+                                        "_id": "df40c13",
+                                        "sg_gallery_list_control_name": "Creative",
+                                        "sg_gallery_list_item_name": "Creative Product",
+                                        "sg_gallery_list_image": {
+                                            "url": "https:\/\/kit.bagigambar.net\/runda\/wp-content\/uploads\/sites\/4\/2021\/04\/pedro-barros-d03GRN5LKm0-unsplash.jpg",
+                                            "id": 82
+                                        }
+                                    }
+                                ],
+                                "sg_loadmore_enable": "yes",
+                                "sg_loadmore_item_show": {
+                                    "unit": "px",
+                                    "size": 9,
+                                    "sizes": []
+                                },
+                                "sg_loadmore_button_text": "Load More",
+                                "sg_loadmore_nomore_text": "No More Item",
+                                "st_container_background_background_background": "classic",
+                                "st_container_background_background_color": "#02010100",
+                                "st_control_padding_responsive": {
+                                    "unit": "px",
+                                    "top": "15",
+                                    "right": "25",
+                                    "bottom": "15",
+                                    "left": "25",
+                                    "isLinked": false
+                                },
+                                "st_control_margin_responsive": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "30",
+                                    "bottom": "30",
+                                    "left": "30",
+                                    "isLinked": false
+                                },
+                                "st_control_typography_content_typography_typography": "custom",
+                                "st_control_typography_content_typography_font_family": "Poppins",
+                                "st_control_typography_content_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 20,
+                                    "sizes": []
+                                },
+                                "st_control_typography_content_typography_font_size_tablet": {
+                                    "unit": "px",
+                                    "size": 20,
+                                    "sizes": []
+                                },
+                                "st_control_typography_content_typography_font_size_mobile": {
+                                    "unit": "px",
+                                    "size": 18,
+                                    "sizes": []
+                                },
+                                "st_control_typography_content_typography_font_weight": "700",
+                                "st_control_normal_color_responsive": "#3F3F3F",
+                                "st_control_normal_background_background_background": "classic",
+                                "st_control_normal_background_background_color": "#02010100",
+                                "st_control_normal_border_border_border": "solid",
+                                "st_control_normal_border_border_width": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "4",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "st_control_normal_border_border_color": "#02010100",
+                                "st_control_active_color_responsive": "#251AFF",
+                                "st_control_active_background_background_background": "classic",
+                                "st_control_active_background_background_color": "#251AFF00",
+                                "st_control_active_border_border_border": "solid",
+                                "st_control_active_border_border_width": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "4",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "st_control_active_border_border_color": "#251AFF",
+                                "st_item_hover_background_background_background": "classic",
+                                "st_item_hover_background_background_color": "#251AFF",
+                                "st_item_hover_opacity_responsive": {
+                                    "unit": "px",
+                                    "size": 0.5,
+                                    "sizes": []
+                                },
+                                "st_item_title_typography_color_responsive": "#FFFFFF",
+                                "st_item_title_typography_hover_color_responsive": "#F2F2F2",
+                                "st_item_title_typography_typography_content_typography_typography": "custom",
+                                "st_item_title_typography_typography_content_typography_font_family": "Poppins",
+                                "st_item_title_typography_typography_content_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 25,
+                                    "sizes": []
+                                },
+                                "st_item_title_typography_typography_content_typography_font_size_tablet": {
+                                    "unit": "px",
+                                    "size": 25,
+                                    "sizes": []
+                                },
+                                "st_item_title_typography_typography_content_typography_font_size_mobile": {
+                                    "unit": "px",
+                                    "size": 25,
+                                    "sizes": []
+                                },
+                                "st_item_title_typography_typography_content_typography_font_weight": "800",
+                                "st_item_content_typography_color_responsive": "#FFFFFF",
+                                "st_item_content_typography_hover_color_responsive": "#F2F2F2",
+                                "st_item_content_typography_typography_content_typography_typography": "custom",
+                                "st_item_content_typography_typography_content_typography_font_family": "Poppins",
+                                "st_item_content_typography_typography_content_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "st_item_content_typography_typography_content_typography_font_size_tablet": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "st_item_content_typography_typography_content_typography_font_size_mobile": {
+                                    "unit": "px",
+                                    "size": 14,
+                                    "sizes": []
+                                },
+                                "st_item_content_typography_typography_content_typography_font_weight": "400",
+                                "st_item_card_background_background_background": "classic",
+                                "st_item_card_background_background_color": "#F2F2F200",
+                                "st_item_card_title_color_responsive": "#000000",
+                                "st_item_card_title_hover_color_responsive": "#251AFF",
+                                "st_item_card_title_typography_content_typography_typography": "custom",
+                                "st_item_card_title_typography_content_typography_font_family": "Poppins",
+                                "st_item_card_title_typography_content_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 20,
+                                    "sizes": []
+                                },
+                                "st_item_card_title_typography_content_typography_font_size_tablet": {
+                                    "unit": "px",
+                                    "size": 20,
+                                    "sizes": []
+                                },
+                                "st_item_card_title_typography_content_typography_font_size_mobile": {
+                                    "unit": "px",
+                                    "size": 18,
+                                    "sizes": []
+                                },
+                                "st_item_card_title_typography_content_typography_font_weight": "700",
+                                "st_item_card_content_color_responsive": "#3F3F3F",
+                                "st_item_card_content_hover_color_responsive": "#3F3F3F",
+                                "st_item_card_content_typography_content_typography_typography": "custom",
+                                "st_item_card_content_typography_content_typography_font_family": "Poppins",
+                                "st_item_card_content_typography_content_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "st_item_card_content_typography_content_typography_font_size_tablet": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "st_item_card_content_typography_content_typography_font_size_mobile": {
+                                    "unit": "px",
+                                    "size": 14,
+                                    "sizes": []
+                                },
+                                "st_item_card_content_typography_content_typography_font_weight": "400",
+                                "st_loadmore_margin_top_responsive": {
+                                    "unit": "px",
+                                    "size": 90,
+                                    "sizes": []
+                                },
+                                "st_loadmore_normal_background_background_background": "classic",
+                                "st_loadmore_normal_background_background_color": "#251AFF",
+                                "st_loadmore_normal_color_responsive": "#FFFFFF",
+                                "st_loadmore_normal_typography_content_typography_typography": "custom",
+                                "st_loadmore_normal_typography_content_typography_font_family": "Poppins",
+                                "st_loadmore_normal_typography_content_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "st_loadmore_normal_typography_content_typography_font_size_tablet": {
+                                    "unit": "px",
+                                    "size": 14,
+                                    "sizes": []
+                                },
+                                "st_loadmore_normal_typography_content_typography_font_size_mobile": {
+                                    "unit": "px",
+                                    "size": 14,
+                                    "sizes": []
+                                },
+                                "st_loadmore_normal_typography_content_typography_font_weight": "600",
+                                "st_loadmore_normal_typography_content_typography_text_transform": "uppercase",
+                                "st_loadmore_normal_padding_responsive": {
+                                    "unit": "px",
+                                    "top": "20",
+                                    "right": "30",
+                                    "bottom": "20",
+                                    "left": "30",
+                                    "isLinked": false
+                                },
+                                "st_price_rating_price_typography_content_typography_typography": "custom",
+                                "st_price_rating_price_typography_content_typography_font_family": "Poppins",
+                                "st_price_rating_price_typography_content_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "st_price_rating_price_typography_content_typography_font_size_tablet": {
+                                    "unit": "px",
+                                    "size": 14,
+                                    "sizes": []
+                                },
+                                "st_price_rating_price_typography_content_typography_font_size_mobile": {
+                                    "unit": "px",
+                                    "size": 14,
+                                    "sizes": []
+                                },
+                                "st_price_rating_price_typography_content_typography_font_weight": "600",
+                                "st_price_rating_price_typography_content_typography_text_transform": "uppercase",
+                                "st_price_rating_rating_typography_content_typography_typography": "custom",
+                                "st_price_rating_rating_typography_content_typography_font_family": "Poppins",
+                                "st_price_rating_rating_typography_content_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "st_price_rating_rating_typography_content_typography_font_size_tablet": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "st_price_rating_rating_typography_content_typography_font_size_mobile": {
+                                    "unit": "px",
+                                    "size": 14,
+                                    "sizes": []
+                                },
+                                "st_price_rating_rating_typography_content_typography_font_weight": "400",
+                                "st_category_typography_content_typography_typography": "custom",
+                                "st_category_typography_content_typography_font_family": "Poppins",
+                                "st_category_typography_content_typography_font_size": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "st_category_typography_content_typography_font_size_tablet": {
+                                    "unit": "px",
+                                    "size": 15,
+                                    "sizes": []
+                                },
+                                "st_category_typography_content_typography_font_size_mobile": {
+                                    "unit": "px",
+                                    "size": 14,
+                                    "sizes": []
+                                },
+                                "st_category_typography_content_typography_font_weight": "400",
+                                "st_search_form_placeholder": "Search Gallery Item...",
+                                "_margin": {
+                                    "unit": "px",
+                                    "top": "20",
+                                    "right": "0",
+                                    "bottom": "0",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "__globals__": {
+                                    "st_control_typography_content_typography_typography": "globals\/typography?id=3ac5d19",
+                                    "st_control_normal_color_responsive": "globals\/colors?id=a41d1b1",
+                                    "st_control_active_color_responsive": "globals\/colors?id=accent",
+                                    "st_control_active_background_background_color": "",
+                                    "st_control_active_border_border_color": "globals\/colors?id=accent",
+                                    "st_item_title_typography_typography_content_typography_typography": "globals\/typography?id=accent",
+                                    "st_item_title_typography_color_responsive": "globals\/colors?id=primary",
+                                    "st_item_title_typography_hover_color_responsive": "globals\/colors?id=secondary",
+                                    "st_item_content_typography_color_responsive": "globals\/colors?id=primary",
+                                    "st_item_content_typography_hover_color_responsive": "globals\/colors?id=secondary",
+                                    "st_item_content_typography_typography_content_typography_typography": "globals\/typography?id=text",
+                                    "st_item_hover_background_background_color": "globals\/colors?id=accent",
+                                    "st_loadmore_normal_color_responsive": "globals\/colors?id=primary",
+                                    "st_loadmore_normal_typography_content_typography_typography": "globals\/typography?id=e263706",
+                                    "st_loadmore_normal_background_background_color": "globals\/colors?id=accent",
+                                    "st_price_rating_price_typography_content_typography_typography": "globals\/typography?id=e263706",
+                                    "st_price_rating_rating_typography_content_typography_typography": "globals\/typography?id=text",
+                                    "st_category_typography_content_typography_typography": "globals\/typography?id=text",
+                                    "st_item_card_title_color_responsive": "globals\/colors?id=text",
+                                    "st_item_card_title_hover_color_responsive": "globals\/colors?id=accent",
+                                    "st_item_card_title_typography_content_typography_typography": "globals\/typography?id=3ac5d19",
+                                    "st_item_card_content_color_responsive": "globals\/colors?id=a41d1b1",
+                                    "st_item_card_content_hover_color_responsive": "globals\/colors?id=a41d1b1",
+                                    "st_item_card_content_typography_content_typography_typography": "globals\/typography?id=text",
+                                    "st_item_card_background_background_color": ""
+                                },
+                                "sg_setting_column_responsive_mobile": {
+                                    "unit": "px",
+                                    "size": 1,
+                                    "sizes": []
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "jkit_gallery",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": true,
+                    "elType": "container"
+                }
+            ],
+            "isInner": false,
+            "elType": "container"
+        }
+    ],
+    "page_settings": {
+        "hide_title": "yes",
+        "eael_ext_toc_title": "Table of Contents",
+        "template": "elementor_canvas"
+    }
+}

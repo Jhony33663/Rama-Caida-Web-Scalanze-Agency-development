@@ -1,0 +1,186 @@
+{
+    "version": "0.4",
+    "title": "Coming Soon",
+    "type": "page",
+    "metadata": {
+        "template_type": "single-page",
+        "include_in_zip": "1",
+        "elementor_pro_required": null,
+        "wp_page_template": "elementor_canvas"
+    },
+    "content": [
+        {
+            "id": "3f93d098",
+            "settings": {
+                "padding": {
+                    "unit": "px",
+                    "top": "350",
+                    "right": "0",
+                    "bottom": "250",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_image": {
+                    "url": "https:\/\/kit.bagigambar.net\/runda\/wp-content\/uploads\/sites\/4\/2021\/04\/dom-fou-QZfmPAOnt2Y-unsplash_3.jpg",
+                    "id": 332
+                },
+                "background_size": "cover",
+                "padding_mobile": {
+                    "unit": "px",
+                    "top": "200",
+                    "right": "0",
+                    "bottom": "100",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "flex_direction": "row",
+                "flex_align_items": "stretch",
+                "flex_gap": {
+                    "size": 10,
+                    "column": "10",
+                    "row": "10",
+                    "unit": "px"
+                }
+            },
+            "elements": [
+                {
+                    "id": "5b8c2473",
+                    "settings": {
+                        "_column_size": 100,
+                        "width": {
+                            "size": null,
+                            "unit": "%"
+                        },
+                        "content_width": "full"
+                    },
+                    "elements": [
+                        {
+                            "id": "46407a80",
+                            "settings": {
+                                "image": {
+                                    "url": "https:\/\/kit.bagigambar.net\/runda\/wp-content\/uploads\/sites\/4\/2021\/04\/Asset-2_logo.png",
+                                    "id": 16
+                                },
+                                "_margin": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "500",
+                                    "bottom": "50",
+                                    "left": "500",
+                                    "isLinked": false
+                                },
+                                "_margin_tablet": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "320",
+                                    "bottom": "0",
+                                    "left": "320",
+                                    "isLinked": false
+                                },
+                                "_margin_mobile": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "120",
+                                    "bottom": "0",
+                                    "left": "120",
+                                    "isLinked": false
+                                },
+                                "_animation": "fadeIn"
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "image",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "dca2db5",
+                            "settings": {
+                                "title": "COMING SOON",
+                                "_margin": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "70",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "_z_index_tablet": 1,
+                                "__globals__": {
+                                    "typography_typography": "globals\/typography?id=03de200",
+                                    "title_color": "globals\/colors?id=primary"
+                                },
+                                "align": "center",
+                                "_animation": "fadeInUp",
+                                "_animation_delay": 200,
+                                "_margin_tablet": {
+                                    "unit": "px",
+                                    "top": "20",
+                                    "right": "0",
+                                    "bottom": "20",
+                                    "left": "0",
+                                    "isLinked": false
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "heading",
+                            "elType": "widget"
+                        },
+                        {
+                            "id": "5cb8b52b",
+                            "settings": {
+                                "sg_content_date": "2021-06-09 12:00",
+                                "sg_content_day_label": "Days",
+                                "sg_content_hour_label": "Hours",
+                                "sg_content_minute_label": "Minutes",
+                                "sg_content_second_label": "Seconds",
+                                "sg_expire_title": "Countdown is finished!",
+                                "sg_expire_content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s.",
+                                "st_day_background_background_background_background": "classic",
+                                "st_day_background_background_background_color": "#02010100",
+                                "st_hour_background_background_background_background": "classic",
+                                "st_hour_background_background_background_color": "#02010100",
+                                "st_minute_background_background_background_background": "classic",
+                                "st_minute_background_background_background_color": "#02010100",
+                                "st_second_background_background_background_background": "classic",
+                                "st_second_background_background_background_color": "#02010100",
+                                "__globals__": {
+                                    "st_day_digit_color_responsive": "globals\/colors?id=primary",
+                                    "st_day_digit_typography_content_typography_typography": "globals\/typography?id=03de200",
+                                    "st_day_label_color_responsive": "globals\/colors?id=primary",
+                                    "st_day_label_typography_content_typography_typography": "globals\/typography?id=e263706",
+                                    "st_hour_digit_color_responsive": "globals\/colors?id=primary",
+                                    "st_hour_digit_typography_content_typography_typography": "globals\/typography?id=03de200",
+                                    "st_hour_label_color_responsive": "globals\/colors?id=primary",
+                                    "st_hour_label_typography_content_typography_typography": "globals\/typography?id=e263706",
+                                    "st_minute_digit_color_responsive": "globals\/colors?id=primary",
+                                    "st_minute_digit_typography_content_typography_typography": "globals\/typography?id=03de200",
+                                    "st_minute_label_color_responsive": "globals\/colors?id=primary",
+                                    "st_minute_label_typography_content_typography_typography": "globals\/typography?id=e263706",
+                                    "st_second_digit_color_responsive": "globals\/colors?id=primary",
+                                    "st_second_digit_typography_content_typography_typography": "globals\/typography?id=03de200",
+                                    "st_second_label_color_responsive": "globals\/colors?id=primary",
+                                    "st_second_label_typography_content_typography_typography": "globals\/typography?id=e263706"
+                                }
+                            },
+                            "elements": [],
+                            "isInner": false,
+                            "widgetType": "jkit_countdown",
+                            "elType": "widget"
+                        }
+                    ],
+                    "isInner": true,
+                    "elType": "container"
+                }
+            ],
+            "isInner": false,
+            "elType": "container"
+        }
+    ],
+    "page_settings": {
+        "hide_title": "yes",
+        "eael_ext_toc_title": "Table of Contents",
+        "template": "elementor_canvas"
+    }
+}

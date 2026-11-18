@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+wordpress-mcp/drive_*.html
+wordpress-mcp/test_img.jpg
+wordpress-mcp/tmp_*.json
+assets/RAMA_CAIDA_LOGO.pdf
