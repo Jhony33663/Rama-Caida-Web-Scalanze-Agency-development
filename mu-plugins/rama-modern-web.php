@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Rama Caida - Modern Web Guidance & Contrast Optimizations
- * Description: Enforces Google Chrome Modern Web Guidance (LCP priority, fluid typography, responsive layout, glassmorphic backdrop-filter blur, accessible text contrast)
+ * Plugin Name: Rama Caida - Modern Web Guidance, Frosted Glass & Brand Styling
+ * Description: Enforces Chrome Modern Web Guidance (LCP, WebP, fluid typography, responsive layout, frosted glass blur, and brand colors)
  * Author: Antigravity
- * Version: 2.0.0
+ * Version: 3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -42,19 +42,29 @@ add_filter( 'elementor/image_size/get_attachment_image_html', function( $html, $
     return $html;
 }, 10, 4 );
 
-// 3. Accessibility, Backdrop Blur, Legibility & Fluid Responsive Design
+// 3. Frosted Glass Blur, Clean Modern Styling & Brand Colors
 add_action( 'wp_head', function() {
     ?>
-    <meta name="color-scheme" content="dark light">
-    <style id="rama-caida-modern-guidance">
-        /* 1. Global Viewport & Anti-Clipping */
+    <style id="rama-caida-brand-styles">
+        :root {
+            --rama-orange: #ED6C36;
+            --rama-mango: #EA560D;
+            --rama-green: #0A5F2D;
+            --rama-yellow: #F7D74C;
+            --rama-coral: #D92616;
+            --rama-dark: #1e293b;
+            --rama-light: #f8fafc;
+        }
+
+        /* 1. Global Viewport & Light/Clean Modern Canvas */
         html, body {
             overflow-x: hidden !important;
             width: 100% !important;
             max-width: 100vw !important;
             box-sizing: border-box;
-            background-color: #0b1120;
-            color: #f1f5f9;
+            background-color: #f8fafc !important;
+            color: #1e293b;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
 
         *, *::before, *::after {
@@ -66,14 +76,108 @@ add_action( 'wp_head', function() {
             height: auto;
         }
 
-        /* 2. Fluid Typography & Accessible Contrast */
+        /* 2. Frosted Glass (Blur) on Cards & Content Boxes */
+        .ekit-testimonial-item,
+        .elementskit-testimonial-slider,
+        .elementor-widget-elementskit-testimonial,
+        .elementor-widget-image-box .elementor-image-box-content,
+        .ekit-wid-con .elementskit-infobox,
+        .elementor-widget-icon-box {
+            backdrop-filter: blur(16px) saturate(160%) !important;
+            -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+            background: rgba(255, 255, 255, 0.85) !important;
+            border: 1px solid rgba(255, 255, 255, 0.6) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+            border-radius: 16px !important;
+            padding: 24px !important;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+        }
+
+        .ekit-testimonial-item:hover,
+        .elementor-widget-image-box:hover .elementor-image-box-content {
+            transform: translateY(-4px) !important;
+            box-shadow: 0 16px 40px rgba(237, 108, 54, 0.12) !important;
+        }
+
+        /* Testimonial text contrast enhancement */
+        .elementskit-author-name {
+            color: #0f172a !important;
+            font-weight: 700 !important;
+            font-size: 1.15rem !important;
+        }
+        .elementskit-author-des {
+            color: var(--rama-orange) !important;
+            font-weight: 600 !important;
+            font-size: 0.95rem !important;
+        }
+        .elementskit-commentor-bio {
+            color: #334155 !important;
+            font-size: 1.05rem !important;
+            line-height: 1.65 !important;
+        }
+
+        /* 3. Header: Light Frosted Glass with Orange Logo */
+        .elementor-location-header {
+            position: relative !important;
+            z-index: 9999 !important;
+            background: rgba(255, 255, 255, 0.92) !important;
+            backdrop-filter: blur(20px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+            border-bottom: 1px solid rgba(237, 108, 54, 0.15) !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+            margin-bottom: 0 !important;
+        }
+
+        /* Header Navigation links: Dark crisp text with orange active/hover */
+        .elementor-location-header .elementor-item,
+        .elementor-location-header .ekit-menu-nav-link {
+            color: #1e293b !important;
+            font-weight: 600 !important;
+            transition: color 0.2s ease !important;
+        }
+        .elementor-location-header .elementor-item:hover,
+        .elementor-location-header .elementor-item.elementor-item-active,
+        .elementor-location-header .ekit-menu-nav-link:hover {
+            color: var(--rama-orange) !important;
+        }
+
+        /* Ensure header logo displays crisply without excess whitespace */
+        .elementor-location-header img {
+            max-height: 52px !important;
+            width: auto !important;
+            object-fit: contain !important;
+        }
+
+        /* 4. Brand Action Buttons (Orange #ED6C36) */
+        .elementor-button,
+        .elementor-button.elementor-size-md,
+        .elementor-button.elementor-size-lg,
+        a.elementskit-btn,
+        .btn-primary {
+            background-color: var(--rama-orange) !important;
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            border-radius: 50px !important;
+            padding: 14px 32px !important;
+            box-shadow: 0 4px 14px rgba(237, 108, 54, 0.35) !important;
+            transition: all 0.25s ease !important;
+            border: none !important;
+        }
+        .elementor-button:hover,
+        a.elementskit-btn:hover {
+            background-color: var(--rama-mango) !important;
+            box-shadow: 0 6px 20px rgba(234, 86, 13, 0.45) !important;
+            transform: translateY(-2px) !important;
+            color: #ffffff !important;
+        }
+
+        /* 5. Fluid Typography */
         .elementor-heading-title, 
         .elementor-widget-heading h1, 
         .elementor-widget-heading h2,
         .elementor-widget-heading h3 {
             text-wrap: balance;
             word-break: break-word;
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
             letter-spacing: -0.015em;
         }
 
@@ -95,52 +199,7 @@ add_action( 'wp_head', function() {
             line-height: 1.35 !important;
         }
 
-        /* 3. Text Legibility over Image Scrims */
-        .elementor-text-editor,
-        .ekit-wid-con .elementskit-section-title-wraper .elementskit-section-title,
-        .ekit-wid-con .elementskit-section-title-wraper p {
-            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-        }
-
-        /* 4. Glassmorphism & Blur for Content Containers & Testimonials */
-        .ekit-testimonial-item,
-        .elementskit-testimonial-slider,
-        .elementor-widget-elementskit-testimonial,
-        .elementor-widget-image-box .elementor-image-box-content {
-            backdrop-filter: blur(12px) saturate(180%);
-            -webkit-backdrop-filter: blur(12px) saturate(180%);
-            border-radius: 12px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* Testimonial text contrast enhancement */
-        .elementskit-author-name {
-            color: #ffffff !important;
-            font-weight: 700 !important;
-            font-size: 1.1rem !important;
-        }
-        .elementskit-author-des {
-            color: #f59e0b !important; /* Gold highlight for title/designation */
-            font-weight: 600 !important;
-        }
-        .elementskit-commentor-bio {
-            color: #f1f5f9 !important;
-            font-size: 1.05rem !important;
-            line-height: 1.6 !important;
-        }
-
-        /* 5. Header & Navigation Fixes */
-        .elementor-location-header {
-            position: relative !important;
-            z-index: 9999 !important;
-            background: rgba(11, 17, 32, 0.95) !important;
-            backdrop-filter: blur(16px) !important;
-            -webkit-backdrop-filter: blur(16px) !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            margin-bottom: 0 !important;
-        }
-
-        /* Reset all destructive negative margins on mobile / tablet */
+        /* 6. Mobile / Tablet Responsive Resets */
         @media (max-width: 1024px) {
             .elementor-section, 
             .e-con,
@@ -155,10 +214,9 @@ add_action( 'wp_head', function() {
             .elementor-location-header {
                 margin-top: 0 !important;
                 margin-bottom: 0 !important;
-                padding: 10px 15px !important;
+                padding: 12px 16px !important;
             }
 
-            /* Prevent mobile horizontal card overflow */
             .elementor-container {
                 max-width: 100% !important;
                 overflow-x: hidden !important;
@@ -167,11 +225,10 @@ add_action( 'wp_head', function() {
 
         @media (max-width: 767px) {
             .elementor-section {
-                padding-top: 40px !important;
-                padding-bottom: 40px !important;
+                padding-top: 36px !important;
+                padding-bottom: 36px !important;
             }
 
-            /* Responsive button sizing */
             .elementor-button {
                 width: 100% !important;
                 text-align: center !important;
@@ -179,9 +236,9 @@ add_action( 'wp_head', function() {
             }
         }
 
-        /* 6. High Contrast Links & Buttons Focus States */
+        /* 7. Focus outline accessibility */
         a:focus-visible, button:focus-visible {
-            outline: 2px solid #3b82f6 !important;
+            outline: 2px solid var(--rama-orange) !important;
             outline-offset: 3px !important;
         }
     </style>
