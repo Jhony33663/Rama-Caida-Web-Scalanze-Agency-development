@@ -265,6 +265,159 @@ add_action( 'wp_head', function() {
             line-height: 1.35 !important;
         }
 
+        /* 8. SERVICES SECTION HARMONY & SCROLL PANEL */
+        .rama-services-section .elementor-container {
+            display: flex !important;
+            align-items: stretch !important;
+        }
+
+        .rama-service-card {
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100% !important;
+        }
+
+        .rama-service-card > .elementor-widget-wrap {
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100% !important;
+        }
+
+        .rama-services-section .elementor-widget-image img,
+        .rama-service-card .elementor-widget-image img,
+        .rama-service-thumb img {
+            width: 100% !important;
+            height: 240px !important;
+            aspect-ratio: 4 / 3 !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            border-radius: 14px !important;
+            display: block !important;
+            margin-bottom: 16px !important;
+        }
+
+        /* Scroll panel for service card text */
+        .rama-scroll-panel {
+            max-height: 200px;
+            height: 200px;
+            overflow-y: auto;
+            padding-right: 12px;
+            margin: 14px 0 20px 0;
+            flex-grow: 1;
+            --scrollbar-thumb: var(--rama-orange);
+            --scrollbar-track: rgba(0, 0, 0, 0.06);
+            scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+            scrollbar-width: thin;
+        }
+
+        @supports not (scrollbar-color: auto) {
+            .rama-scroll-panel {
+                scrollbar-width: auto;
+            }
+            .rama-scroll-panel::-webkit-scrollbar {
+                width: 6px;
+            }
+            .rama-scroll-panel::-webkit-scrollbar-thumb {
+                background: var(--rama-orange);
+                border-radius: 4px;
+            }
+            .rama-scroll-panel::-webkit-scrollbar-track {
+                background: rgba(0, 0, 0, 0.06);
+            }
+        }
+
+        .rama-scroll-panel p {
+            margin-bottom: 12px !important;
+            font-size: 0.95rem !important;
+            line-height: 1.65 !important;
+            color: #334155 !important;
+        }
+
+        .rama-service-card .elementor-widget-button {
+            margin-top: auto !important;
+        }
+
+        /* 9. GRAB YOUR SPOT (SUBTLE BLACK FROSTED GLASS 00000) */
+        .elementor-section:has(.rama-cta-glass-card) .elementor-container {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            max-width: 900px !important;
+        }
+
+        .rama-cta-glass-card,
+        .elementor-column.rama-cta-glass-card,
+        .elementor-column.rama-cta-glass-card > .elementor-widget-wrap {
+            backdrop-filter: blur(20px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+            background: rgba(0, 0, 0, 0.65) !important; /* sutil negro #000000 */
+            border: 1px solid rgba(255, 255, 255, 0.18) !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45) !important;
+            border-radius: 24px !important;
+            padding: 48px 40px !important;
+            max-width: 840px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: 100% !important;
+            text-align: center !important;
+            box-sizing: border-box !important;
+        }
+
+        .rama-cta-glass-card h2,
+        .rama-cta-glass-card h2.elementor-heading-title {
+            color: #ffffff !important;
+            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7) !important;
+            font-weight: 800 !important;
+        }
+
+        .rama-cta-glass-card p {
+            color: #f8fafc !important;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6) !important;
+            font-size: 1.2rem !important;
+            line-height: 1.7 !important;
+            max-width: 720px !important;
+            margin: 15px auto 25px !important;
+        }
+
+        /* 10. PORTFOLIO COLLAGE SYMMETRY */
+        .rama-portfolio-section .elementor-container {
+            display: flex !important;
+            align-items: stretch !important;
+            gap: 20px !important;
+        }
+
+        .rama-portfolio-col {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        .rama-portfolio-section .elementor-widget-image,
+        .rama-portfolio-section .elementor-widget-image .elementor-widget-container {
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        .rama-portfolio-section img,
+        .rama-portfolio-col img {
+            width: 100% !important;
+            height: 280px !important;
+            aspect-ratio: 4 / 3 !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            border-radius: 16px !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease !important;
+            display: block !important;
+        }
+
+        .rama-portfolio-section img:hover,
+        .rama-portfolio-col img:hover {
+            transform: translateY(-6px) scale(1.02) !important;
+            box-shadow: 0 20px 40px rgba(237, 108, 54, 0.25) !important;
+        }
+
         /* 7. Mobile / Tablet Responsive Resets */
         @media (max-width: 1024px) {
             .elementor-section, 
