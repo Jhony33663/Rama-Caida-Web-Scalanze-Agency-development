@@ -798,6 +798,12 @@ add_action( 'wp_head', function() {
 
             /* TRUE FULLSCREEN MOBILE MENU MODAL (100vw x 100dvh) */
             .elementor-location-header .jkit-menu-wrapper {
+                display: none !important;
+            }
+
+            /* Active State: 100% Fullscreen Viewport */
+            .elementor-location-header .jkit-menu-wrapper.active {
+                display: flex !important;
                 position: fixed !important;
                 top: 0 !important;
                 left: 0 !important;
@@ -812,7 +818,6 @@ add_action( 'wp_head', function() {
                 background: #ffffff !important;
                 box-shadow: none !important;
                 z-index: 9999999 !important;
-                display: flex !important;
                 flex-direction: column !important;
                 justify-content: flex-start !important;
                 padding: 20px 24px 36px 24px !important;
@@ -820,19 +825,10 @@ add_action( 'wp_head', function() {
                 overflow-x: hidden !important;
                 -webkit-overflow-scrolling: touch !important;
                 border-radius: 0 !important;
-                opacity: 0 !important;
-                visibility: hidden !important;
-                pointer-events: none !important;
-                transform: translateY(-8px) scale(0.99) !important;
-                transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s !important;
-            }
-
-            /* Active State: 100% Fullscreen Viewport */
-            .elementor-location-header .jkit-menu-wrapper.active {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
-                transform: translateY(0) scale(1) !important;
+                transform: none !important;
             }
 
             /* Fullscreen Menu Top Header Bar (Logo + Close Button) */
@@ -1063,61 +1059,94 @@ add_action( 'wp_head', function() {
         }
     </style>
     <script id="rama-caida-mobile-nav-js">
-        document.addEventListener('DOMContentLoaded', function() {
-            var wrapper = document.querySelector('.elementor-location-header .jkit-menu-wrapper');
-            var hamburger = document.querySelector('.elementor-location-header .jkit-hamburger-menu');
-            var closeBtn = document.querySelector('.elementor-location-header .jkit-close-menu');
-            var menuContainer = document.querySelector('.elementor-location-header .jkit-menu-container');
-
-            // Inject bottom CTA into mobile menu container if not already present
-            if (menuContainer && !menuContainer.querySelector('.rama-mobile-drawer-footer')) {
-                var footer = document.createElement('div');
-                footer.className = 'rama-mobile-drawer-footer';
-                footer.innerHTML = '<a href="/contact-us/" class="rama-mobile-drawer-cta">GET IN TOUCH</a><div class="rama-mobile-drawer-info"><span>📍 Doral, Florida</span><span>✉️ info@ramacaida.com</span></div>';
-                menuContainer.appendChild(footer);
-            }
-
-            function openMobileMenu() {
-                if (wrapper) {
-                    wrapper.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                    document.documentElement.style.overflow = 'hidden';
+        (function() {
+            function initMobileNav() {
+                // Ensure #services ID exists on services section
+                var servicesSec = document.querySelector('.rama-services-section');
+                if (servicesSec && !servicesSec.id) {
+                    servicesSec.id = 'services';
                 }
-            }
 
-            function closeMobileMenu() {
-                if (wrapper) {
-                    wrapper.classList.remove('active');
-                    document.body.style.overflow = '';
-                    document.documentElement.style.overflow = '';
+                // Add footer CTA inside menu container if not present
+                var menuContainer = document.querySelector('.elementor-location-header .jkit-menu-container');
+                if (menuContainer && !menuContainer.querySelector('.rama-mobile-drawer-footer')) {
+                    var footer = document.createElement('div');
+                    footer.className = 'rama-mobile-drawer-footer';
+                    footer.innerHTML = '<a href="/contact-us/" class="rama-mobile-drawer-cta">GET IN TOUCH</a><div class="rama-mobile-drawer-info"><span>📍 Doral, Florida</span><span>✉️ info@ramacaida.com</span></div>';
+                    menuContainer.appendChild(footer);
                 }
-            }
 
-            if (hamburger) {
-                hamburger.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    openMobileMenu();
-                });
-            }
-
-            if (closeBtn) {
-                closeBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    closeMobileMenu();
-                });
-            }
-
-            // Close on clicking any navigation link
-            if (wrapper) {
-                wrapper.addEventListener('click', function(e) {
-                    if (e.target.closest('a')) {
-                        closeMobileMenu();
+                // Global click capture delegation: 100% reliable across all devices
+                document.addEventListener('click', function(e) {
+                    var hamburger = e.target.closest('.jkit-hamburger-menu');
+                    if (hamburger) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var wrapper = document.querySelector('.elementor-location-header .jkit-menu-wrapper');
+                        if (wrapper) {
+                            var willOpen = !wrapper.classList.contains('active');
+                            wrapper.classList.toggle('active', willOpen);
+                            document.body.style.overflow = willOpen ? 'hidden' : '';
+                        }
+                        return;
                     }
-                });
+
+                    var closeBtn = e.target.closest('.jkit-close-menu');
+                    if (closeBtn) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var wrapper = document.querySelector('.elementor-location-header .jkit-menu-wrapper');
+                        if (wrapper) {
+                            wrapper.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+                        return;
+                    }
+
+                    // Click on any link inside the mobile menu
+                    var navLink = e.target.closest('.elementor-location-header .jkit-menu-wrapper a');
+                    if (navLink) {
+                        var href = navLink.getAttribute('href') || '';
+                        
+                        // Internal anchor link e.g. #services
+                        if (href.startsWith('#')) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            var wrapper = document.querySelector('.elementor-location-header .jkit-menu-wrapper');
+                            if (wrapper) wrapper.classList.remove('active');
+                            document.body.style.overflow = '';
+
+                            var target = document.querySelector(href) || document.querySelector('.rama-services-section');
+                            if (target) {
+                                setTimeout(function() {
+                                    var header = document.querySelector('.elementor-location-header');
+                                    var offset = header ? header.offsetHeight : 70;
+                                    var targetPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                                    window.scrollTo({ top: targetPos, behavior: 'smooth' });
+                                }, 150);
+                            } else {
+                                window.location.href = '/' + href;
+                            }
+                            return;
+                        }
+
+                        // Real page link (e.g. /merchandising-sales/, /get-to-know-us/, /contact-us/)
+                        // Force explicit navigation so no third-party script can cancel or block it
+                        if (navLink.href) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            window.location.href = navLink.href;
+                        }
+                    }
+                }, true);
             }
-        });
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initMobileNav);
+            } else {
+                initMobileNav();
+            }
+        })();
     </script>
     <?php
 }, 100 );
