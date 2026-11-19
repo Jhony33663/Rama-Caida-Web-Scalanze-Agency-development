@@ -428,41 +428,165 @@ add_action( 'wp_head', function() {
             margin: 15px auto 25px !important;
         }
 
-        /* 10. PORTFOLIO COLLAGE SYMMETRY */
+        /* 10. PORTFOLIO CAROUSEL & VISUAL HARMONY */
+        .rama-portfolio-section {
+            position: relative !important;
+            overflow: hidden !important;
+            padding-top: 80px !important;
+            padding-bottom: 90px !important;
+        }
+
         .rama-portfolio-section .elementor-container {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            position: relative !important;
+        }
+
+        .rama-portfolio-carousel {
+            position: relative !important;
+            padding: 10px 0 50px 0 !important;
+        }
+
+        .rama-portfolio-carousel .elementor-image-carousel-wrapper,
+        .rama-portfolio-carousel .swiper {
+            overflow: visible !important;
+            padding-bottom: 20px !important;
+        }
+
+        .rama-portfolio-carousel .swiper-slide {
+            padding: 10px 12px !important;
+            box-sizing: border-box !important;
             display: flex !important;
-            align-items: stretch !important;
-            gap: 20px !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
         }
 
-        .rama-portfolio-col {
-            display: flex !important;
-            flex-direction: column !important;
-        }
-
-        .rama-portfolio-section .elementor-widget-image,
-        .rama-portfolio-section .elementor-widget-image .elementor-widget-container {
-            height: 100% !important;
+        .rama-portfolio-carousel .swiper-slide-inner {
             width: 100% !important;
+            border-radius: 18px !important;
+            overflow: hidden !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+            transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+            background: #ffffff !important;
         }
 
-        .rama-portfolio-section img,
-        .rama-portfolio-col img {
+        .rama-portfolio-carousel .swiper-slide-inner:hover {
+            transform: translateY(-8px) scale(1.02) !important;
+            box-shadow: 0 20px 45px rgba(237, 108, 54, 0.22) !important;
+        }
+
+        .rama-portfolio-carousel img,
+        .rama-portfolio-carousel .swiper-slide-image {
             width: 100% !important;
-            height: 280px !important;
+            height: 290px !important;
             aspect-ratio: 4 / 3 !important;
             object-fit: cover !important;
             object-position: center !important;
-            border-radius: 16px !important;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
-            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease !important;
             display: block !important;
+            border-radius: 18px !important;
         }
 
-        .rama-portfolio-section img:hover,
-        .rama-portfolio-col img:hover {
-            transform: translateY(-6px) scale(1.02) !important;
-            box-shadow: 0 20px 40px rgba(237, 108, 54, 0.25) !important;
+        /* Swiper Navigation Arrows */
+        .rama-portfolio-carousel .elementor-swiper-button {
+            position: absolute !important;
+            top: 45% !important;
+            transform: translateY(-50%) !important;
+            z-index: 20 !important;
+            width: 48px !important;
+            height: 48px !important;
+            background: var(--rama-orange) !important;
+            border-radius: 50% !important;
+            box-shadow: 0 6px 20px rgba(237, 108, 54, 0.45) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: pointer !important;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+
+        .rama-portfolio-carousel .elementor-swiper-button:hover {
+            background: var(--rama-green) !important;
+            transform: translateY(-50%) scale(1.12) !important;
+            box-shadow: 0 8px 25px rgba(10, 95, 45, 0.4) !important;
+        }
+
+        .rama-portfolio-carousel .elementor-swiper-button svg,
+        .rama-portfolio-carousel .elementor-swiper-button i {
+            width: 18px !important;
+            height: 18px !important;
+            font-size: 18px !important;
+            fill: #ffffff !important;
+            color: #ffffff !important;
+            transition: fill 0.2s ease !important;
+        }
+
+        .rama-portfolio-carousel .elementor-swiper-button-prev {
+            left: -22px !important;
+        }
+
+        .rama-portfolio-carousel .elementor-swiper-button-next {
+            right: -22px !important;
+        }
+
+        /* Swiper Pagination Bullets */
+        .rama-portfolio-carousel .swiper-pagination {
+            bottom: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+        }
+
+        .rama-portfolio-carousel .swiper-pagination-bullet {
+            background: #cbd5e1 !important;
+            opacity: 0.8 !important;
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50% !important;
+            margin: 0 !important;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+
+        .rama-portfolio-carousel .swiper-pagination-bullet:hover {
+            background: var(--rama-orange) !important;
+            opacity: 1 !important;
+        }
+
+        .rama-portfolio-carousel .swiper-pagination-bullet-active {
+            background: var(--rama-orange) !important;
+            opacity: 1 !important;
+            width: 32px !important;
+            border-radius: 8px !important;
+            box-shadow: 0 2px 8px rgba(237, 108, 54, 0.4) !important;
+        }
+
+        @media (max-width: 1024px) {
+            .rama-portfolio-carousel .elementor-swiper-button-prev {
+                left: 0px !important;
+            }
+            .rama-portfolio-carousel .elementor-swiper-button-next {
+                right: 0px !important;
+            }
+            .rama-portfolio-carousel img,
+            .rama-portfolio-carousel .swiper-slide-image {
+                height: 260px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .rama-portfolio-carousel img,
+            .rama-portfolio-carousel .swiper-slide-image {
+                height: 230px !important;
+            }
+            .rama-portfolio-carousel .elementor-swiper-button {
+                width: 40px !important;
+                height: 40px !important;
+            }
+            .rama-portfolio-carousel .elementor-swiper-button svg {
+                width: 14px !important;
+                height: 14px !important;
+            }
         }
 
         /* 7. Mobile / Tablet Responsive Resets */
