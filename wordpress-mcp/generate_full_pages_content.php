@@ -38,9 +38,16 @@ $p6_hero_widgets = [
     ])
 ];
 $p6_sections[] = make_section(
-    [make_col($p6_hero_widgets, 100)],
-    get_drive_img('bon-o-bon-01', $webp_map),
-    ['padding' => ['unit' => 'px', 'top' => '140', 'right' => '20', 'bottom' => '140', 'left' => '20', 'isLinked' => false]]
+    [make_col($p6_hero_widgets, 100, [
+        '_css_classes' => 'rama-hero-card',
+        'margin' => ['unit' => 'px', 'top' => '0', 'right' => 'auto', 'bottom' => '0', 'left' => 'auto', 'isLinked' => false]
+    ])],
+    get_drive_img('bon-o-bon-02', $webp_map),
+    [
+        'padding' => ['unit' => 'px', 'top' => '140', 'right' => '20', 'bottom' => '140', 'left' => '20', 'isLinked' => false],
+        'content_width' => ['unit' => 'px', 'size' => 1000],
+        'gap' => 'no'
+    ]
 );
 
 // Section 2: Our Services (3 Bloques)
@@ -143,7 +150,10 @@ $p7_hero = [
     make_heading('Retail Specialists:', 'h1', 'center', ['title_color' => '#ffffff']),
     make_text('<p style="color: #ffffff; text-align: center; font-size: 1.2rem; max-width: 900px; margin: 0 auto;">In the world of sales and retail, having the right team interacting with category managers, store managers, and buyers in the field is not just important, it’s essential! These are the people who carry ideas from the creative mind all the way to the shelves and into the hands of customers.</p><p style="color: #ffffff; text-align: center; font-size: 1.2rem; max-width: 900px; margin: 15px auto 0;">Having the right person as your sales force or merchandiser means your product gets the attention, positioning, and presentation it deserves. These experts don’t just sell they tell your story with enthusiasm and knowledge, connecting directly with those who make decisions in-store.</p><h3 style="color: #F7D74C; text-align: center; margin-top: 20px;">And this is where you can find Superstars !</h3>')
 ];
-$p7_sections[] = make_section([make_col($p7_hero, 100)], get_drive_img('bon-o-bon-02', $webp_map), ['padding' => ['unit' => 'px', 'top' => '120', 'right' => '20', 'bottom' => '120', 'left' => '20', 'isLinked' => false]]);
+$p7_sections[] = make_section([make_col($p7_hero, 100, [
+    '_css_classes' => 'rama-hero-card',
+    'margin' => ['unit' => 'px', 'top' => '0', 'right' => 'auto', 'bottom' => '0', 'left' => 'auto', 'isLinked' => false]
+])], get_drive_img('bon-o-bon-03', $webp_map), ['padding' => ['unit' => 'px', 'top' => '120', 'right' => '20', 'bottom' => '120', 'left' => '20', 'isLinked' => false]]);
 
 // Merchandisers
 $p7_merch = [

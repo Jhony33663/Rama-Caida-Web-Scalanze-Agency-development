@@ -134,9 +134,37 @@ add_action( 'wp_head', function() {
             color: #0f172a !important;
         }
 
-        /* 3. HERO FROSTED GLASS BLUR CONTAINER (SOLVES BLANCO SOBRE BLANCO) */
-        .rama-hero-card,
-        .elementor-column.rama-hero-card > .elementor-widget-wrap {
+        /* 3. HERO FROSTED GLASS BLUR CONTAINER & PERFECT CENTERING */
+        .elementor-section.rama-hero-section .elementor-container,
+        .elementor-section:has(.rama-hero-card) .elementor-container,
+        .elementor-section:has(.elementor-element-fd3bd608) .elementor-container {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            float: none !important;
+            width: 100% !important;
+            max-width: 960px !important;
+        }
+
+        .elementor-section.rama-hero-section .elementor-column,
+        .elementor-column.rama-hero-card,
+        .elementor-column.elementor-element-fd3bd608,
+        .rama-hero-card {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100% !important;
+            max-width: 880px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            float: none !important;
+        }
+
+        .elementor-section.rama-hero-section .elementor-widget-wrap,
+        .elementor-column.elementor-element-fd3bd608 > .elementor-widget-wrap,
+        .rama-hero-card > .elementor-widget-wrap {
             backdrop-filter: blur(24px) saturate(190%) !important;
             -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
             background: rgba(15, 23, 42, 0.78) !important;
@@ -144,8 +172,12 @@ add_action( 'wp_head', function() {
             box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35) !important;
             border-radius: 24px !important;
             padding: 48px 40px !important;
-            max-width: 950px !important;
-            margin: 0 auto !important;
+            max-width: 880px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            width: 100% !important;
+            text-align: center !important;
+            box-sizing: border-box !important;
         }
 
         .rama-hero-card h1,
