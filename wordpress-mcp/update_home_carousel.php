@@ -85,22 +85,34 @@ function make_col($widgets, $width = 100, $settings = []) {
 }
 
 function make_glass_col_local($widgets, $width = 100, $settings = []) {
-    return make_col($widgets, $width, array_merge([
+    $col_classes = isset($settings['css_classes']) ? $settings['css_classes'] : (isset($settings['_css_classes']) ? $settings['_css_classes'] : '');
+    $base_settings = [
         'background_background' => 'classic',
         'background_color' => 'rgba(255, 255, 255, 0.90)',
         'border_radius' => ['unit' => 'px', 'top' => '16', 'right' => '16', 'bottom' => '16', 'left' => '16', 'isLinked' => true],
         'padding' => ['unit' => 'px', 'top' => '32', 'right' => '28', 'bottom' => '32', 'left' => '28', 'isLinked' => false],
         'box_shadow_box_shadow_type' => 'yes',
         'box_shadow_box_shadow' => ['horizontal' => 0, 'vertical' => 12, 'blur' => 32, 'spread' => 0, 'color' => 'rgba(0,0,0,0.06)']
-    ], $settings));
+    ];
+    if (!empty($col_classes)) {
+        $base_settings['css_classes'] = $col_classes;
+        $base_settings['_css_classes'] = $col_classes;
+    }
+    return make_col($widgets, $width, array_merge($base_settings, $settings));
 }
 
 function make_section($cols, $bg_img = null, $extra_st = []) {
+    $sec_classes = isset($extra_st['css_classes']) ? $extra_st['css_classes'] : (isset($extra_st['_css_classes']) ? $extra_st['_css_classes'] : '');
     $st = array_merge([
         'layout' => 'boxed',
         'content_width' => ['unit' => 'px', 'size' => 1200],
         'padding' => ['unit' => 'px', 'top' => '80', 'right' => '20', 'bottom' => '80', 'left' => '20', 'isLinked' => false],
     ], $extra_st);
+
+    if (!empty($sec_classes)) {
+        $st['css_classes'] = $sec_classes;
+        $st['_css_classes'] = $sec_classes;
+    }
 
     if ($bg_img && !empty($bg_img['url'])) {
         $st['background_background'] = 'classic';

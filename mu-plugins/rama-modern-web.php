@@ -287,22 +287,31 @@ add_action( 'wp_head', function() {
         .rama-services-section .elementor-container {
             display: flex !important;
             align-items: stretch !important;
+            gap: 24px !important;
         }
 
+        .rama-services-section .elementor-column,
         .rama-service-card,
         .elementor-column.rama-service-card {
             display: flex !important;
             flex-direction: column !important;
-            height: 100% !important;
+            height: auto !important;
         }
 
+        .rama-services-section .elementor-widget-wrap,
         .rama-service-card > .elementor-widget-wrap,
         .elementor-column.rama-service-card > .elementor-widget-wrap,
         .rama-service-card .elementor-element-populated {
             display: flex !important;
             flex-direction: column !important;
             height: 100% !important;
-            flex: 1 1 100% !important;
+            flex: 1 1 auto !important;
+        }
+
+        .rama-services-section .elementor-widget-image,
+        .rama-service-card .elementor-widget-image {
+            margin-bottom: 16px !important;
+            width: 100% !important;
         }
 
         .rama-services-section .elementor-widget-image img,
@@ -315,20 +324,36 @@ add_action( 'wp_head', function() {
             object-position: center !important;
             border-radius: 14px !important;
             display: block !important;
-            margin-bottom: 16px !important;
+            margin: 0 !important;
         }
 
-        /* Equalize title height across all 3 cards so scroll panels align perfectly */
-        .rama-service-card .elementor-widget-heading,
-        .rama-service-card .elementor-widget-heading .elementor-widget-container,
-        .rama-service-card h3.elementor-heading-title {
-            min-height: 58px !important;
+        /* Equalize title height strictly across ALL 3 cards so scroll panels & buttons align 100% */
+        .rama-services-section .rama-service-title,
+        .rama-services-section .rama-service-card .elementor-widget-heading {
+            height: 72px !important;
+            min-height: 72px !important;
+            max-height: 72px !important;
+            margin-top: 0 !important;
+            margin-bottom: 12px !important;
+            display: block !important;
+            overflow: hidden !important;
+        }
+
+        .rama-services-section .rama-service-title .elementor-widget-container,
+        .rama-services-section .rama-service-card .elementor-widget-heading .elementor-widget-container {
+            height: 100% !important;
             display: flex !important;
             align-items: flex-start !important;
-            margin-top: 0 !important;
-            margin-bottom: 6px !important;
+        }
+
+        .rama-services-section .rama-service-title h3,
+        .rama-services-section .rama-service-title h3.elementor-heading-title,
+        .rama-services-section .rama-service-card h3.elementor-heading-title {
+            margin: 0 !important;
+            padding: 0 !important;
             font-size: 1.45rem !important;
             line-height: 1.25 !important;
+            color: var(--rama-orange) !important;
         }
 
         /* Scroll panel for service card text - identical fixed height */
@@ -338,7 +363,7 @@ add_action( 'wp_head', function() {
             min-height: 175px !important;
             overflow-y: auto !important;
             padding-right: 12px !important;
-            margin: 8px 0 20px 0 !important;
+            margin: 0 0 16px 0 !important;
             --scrollbar-thumb: var(--rama-orange);
             --scrollbar-track: rgba(0, 0, 0, 0.06);
             scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
@@ -369,13 +394,15 @@ add_action( 'wp_head', function() {
         }
 
         /* Service Cards CTA Button - Sleek & Horizontally Aligned */
-        .rama-service-card .elementor-widget-button {
+        .rama-services-section .rama-service-btn,
+        .rama-services-section .rama-service-card .elementor-widget-button {
             margin-top: auto !important;
             padding-top: 8px !important;
             margin-bottom: 0 !important;
         }
 
-        .rama-service-card .elementor-button {
+        .rama-services-section .rama-service-btn .elementor-button,
+        .rama-services-section .rama-service-card .elementor-button {
             padding: 9px 22px !important;
             font-size: 0.82rem !important;
             font-weight: 600 !important;
