@@ -254,7 +254,7 @@ $p6_sections[] = make_section([
     'padding' => ['unit' => 'px', 'top' => '20', 'right' => '20', 'bottom' => '80', 'left' => '20', 'isLinked' => false]
 ]);
 
-// 3. GET TO KNOW US
+// 3. GET TO KNOW US - Vertically Centered & Balanced Proportions
 $p6_about_left = [
     make_image(get_drive_img('buen-dia-01', $webp_map))
 ];
@@ -264,9 +264,21 @@ $p6_about_right = [
     make_button('Learn more', '/get-to-know-us/', 'left')
 ];
 $p6_sections[] = make_section([
-    make_col($p6_about_left, 45),
-    make_glass_col_local($p6_about_right, 55)
-], null, ['background_color' => '#f1f5f9']);
+    make_col($p6_about_left, 45, [
+        'css_classes' => 'rama-about-img-col',
+        '_css_classes' => 'rama-about-img-col'
+    ]),
+    make_glass_col_local($p6_about_right, 55, [
+        'css_classes' => 'rama-about-card-col',
+        '_css_classes' => 'rama-about-card-col'
+    ])
+], null, [
+    'background_color' => '#f1f5f9',
+    'css_classes' => 'rama-about-section',
+    '_css_classes' => 'rama-about-section',
+    'content_position' => 'middle',
+    'padding' => ['unit' => 'px', 'top' => '80', 'right' => '20', 'bottom' => '80', 'left' => '20', 'isLinked' => false]
+]);
 
 // 4. CALL TO ACTION (Grab your spot) - Subtle Black Frosted Glass
 $p6_cta = [
@@ -277,6 +289,7 @@ $p6_cta = [
 $p6_sections[] = make_section([
     make_col($p6_cta, 100, [
         '_css_classes' => 'rama-cta-glass-card',
+        'css_classes' => 'rama-cta-glass-card',
         'background_background' => 'classic',
         'background_color' => 'rgba(0, 0, 0, 0.65)',
         'border_radius' => ['unit' => 'px', 'top' => '24', 'right' => '24', 'bottom' => '24', 'left' => '24', 'isLinked' => true],
@@ -288,7 +301,7 @@ $p6_sections[] = make_section([
     'padding' => ['unit' => 'px', 'top' => '100', 'right' => '20', 'bottom' => '100', 'left' => '20', 'isLinked' => false]
 ]);
 
-// 5. PORTFOLIO - CAROUSEL BLOCK
+// 5. PORTFOLIO - CAROUSEL BLOCK (100% Curated, Existing Drive WebP Images)
 $portfolio_images = [
     get_drive_img('bon-o-bon-03', $webp_map),
     get_drive_img('colcafe-02', $webp_map),
@@ -298,7 +311,7 @@ $portfolio_images = [
     get_drive_img('bon-o-bon-10', $webp_map),
     get_drive_img('santo-domingo-07', $webp_map),
     get_drive_img('buen-dia-02', $webp_map),
-    get_drive_img('aroha-02', $webp_map),
+    get_drive_img('colcafe-01', $webp_map),
     get_drive_img('bon-o-bon-02', $webp_map),
 ];
 

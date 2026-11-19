@@ -411,6 +411,89 @@ add_action( 'wp_head', function() {
             box-shadow: 0 3px 10px rgba(237, 108, 54, 0.22) !important;
         }
 
+        /* 8.5. GET TO KNOW US: Vertically Centered & Balanced Proportions */
+        .rama-about-section {
+            padding-top: 70px !important;
+            padding-bottom: 70px !important;
+            background-color: #f1f5f9 !important;
+        }
+
+        .rama-about-section .elementor-container {
+            display: flex !important;
+            align-items: center !important; /* Center columns vertically in the middle */
+            justify-content: center !important;
+            gap: 36px !important;
+            max-width: 1140px !important;
+            margin: 0 auto !important;
+        }
+
+        .rama-about-section .rama-about-img-col,
+        .rama-about-section .elementor-column:first-child {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .rama-about-section .elementor-widget-image {
+            width: 100% !important;
+            margin: 0 !important;
+        }
+
+        .rama-about-section .elementor-widget-image img {
+            width: 100% !important;
+            height: 440px !important;
+            aspect-ratio: 4 / 3 !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            border-radius: 20px !important;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08) !important;
+            display: block !important;
+        }
+
+        .rama-about-section .rama-about-card-col,
+        .rama-about-section .elementor-column:last-child {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+        }
+
+        .rama-about-section .rama-about-card-col > .elementor-widget-wrap,
+        .rama-about-section .elementor-column:last-child > .elementor-widget-wrap {
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            padding: 44px 40px !important;
+            border-radius: 20px !important;
+        }
+
+        .rama-about-section h2,
+        .rama-about-section h2.elementor-heading-title {
+            margin-top: 0 !important;
+            margin-bottom: 16px !important;
+            font-size: 2.1rem !important;
+        }
+
+        .rama-about-section p {
+            line-height: 1.75 !important;
+            color: #334155 !important;
+            font-size: 1.05rem !important;
+            margin-bottom: 16px !important;
+        }
+
+        .rama-about-section .elementor-widget-button {
+            margin-top: 10px !important;
+        }
+
+        @media (max-width: 1024px) {
+            .rama-about-section .elementor-container {
+                flex-direction: column !important;
+                gap: 28px !important;
+            }
+            .rama-about-section .elementor-widget-image img {
+                height: 340px !important;
+            }
+        }
+
         /* 9. GRAB YOUR SPOT (SUBTLE BLACK FROSTED GLASS 00000) */
         .elementor-section:has(.rama-cta-glass-card) .elementor-container {
             display: flex !important;
