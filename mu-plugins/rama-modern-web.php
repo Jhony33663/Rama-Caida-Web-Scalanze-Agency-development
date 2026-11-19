@@ -221,7 +221,7 @@ add_action( 'wp_head', function() {
             line-height: 1.7;
         }
 
-        /* 5. Brand Action Buttons (Orange #ED6C36) */
+        /* 5. Brand Action Buttons (Orange #ED6C36) - Refined Elegant Sizing */
         .elementor-button,
         .elementor-button.elementor-size-md,
         .elementor-button.elementor-size-lg,
@@ -229,21 +229,39 @@ add_action( 'wp_head', function() {
         .btn-primary {
             background-color: var(--rama-orange) !important;
             color: #ffffff !important;
-            font-weight: 700 !important;
+            font-weight: 600 !important;
+            font-size: 0.88rem !important;
             border-radius: 50px !important;
-            padding: 14px 34px !important;
-            box-shadow: 0 4px 14px rgba(237, 108, 54, 0.35) !important;
+            padding: 10px 24px !important;
+            box-shadow: 0 3px 10px rgba(237, 108, 54, 0.25) !important;
             transition: all 0.25s ease !important;
             border: none !important;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.03em;
+            display: inline-block !important;
+            line-height: 1.3 !important;
         }
         .elementor-button:hover,
         a.elementskit-btn:hover {
             background-color: var(--rama-mango) !important;
-            box-shadow: 0 6px 20px rgba(234, 86, 13, 0.45) !important;
+            box-shadow: 0 5px 16px rgba(234, 86, 13, 0.35) !important;
             transform: translateY(-2px) !important;
             color: #ffffff !important;
+        }
+
+        /* Header CTA button */
+        .elementor-location-header .elementor-button {
+            padding: 8px 18px !important;
+            font-size: 0.82rem !important;
+            font-weight: 600 !important;
+        }
+
+        /* Hero & Banner CTA buttons */
+        .rama-hero-card .elementor-button,
+        .rama-cta-glass-card .elementor-button {
+            padding: 11px 26px !important;
+            font-size: 0.92rem !important;
+            font-weight: 600 !important;
         }
 
         /* 6. Fluid Typography */
@@ -265,22 +283,26 @@ add_action( 'wp_head', function() {
             line-height: 1.35 !important;
         }
 
-        /* 8. SERVICES SECTION HARMONY & SCROLL PANEL */
+        /* 8. SERVICES SECTION HARMONY, SCROLL PANEL & EXACT BUTTON ALIGNMENT */
         .rama-services-section .elementor-container {
             display: flex !important;
             align-items: stretch !important;
         }
 
-        .rama-service-card {
+        .rama-service-card,
+        .elementor-column.rama-service-card {
             display: flex !important;
             flex-direction: column !important;
             height: 100% !important;
         }
 
-        .rama-service-card > .elementor-widget-wrap {
+        .rama-service-card > .elementor-widget-wrap,
+        .elementor-column.rama-service-card > .elementor-widget-wrap,
+        .rama-service-card .elementor-element-populated {
             display: flex !important;
             flex-direction: column !important;
             height: 100% !important;
+            flex: 1 1 100% !important;
         }
 
         .rama-services-section .elementor-widget-image img,
@@ -296,14 +318,27 @@ add_action( 'wp_head', function() {
             margin-bottom: 16px !important;
         }
 
-        /* Scroll panel for service card text */
+        /* Equalize title height across all 3 cards so scroll panels align perfectly */
+        .rama-service-card .elementor-widget-heading,
+        .rama-service-card .elementor-widget-heading .elementor-widget-container,
+        .rama-service-card h3.elementor-heading-title {
+            min-height: 58px !important;
+            display: flex !important;
+            align-items: flex-start !important;
+            margin-top: 0 !important;
+            margin-bottom: 6px !important;
+            font-size: 1.45rem !important;
+            line-height: 1.25 !important;
+        }
+
+        /* Scroll panel for service card text - identical fixed height */
         .rama-scroll-panel {
-            max-height: 200px;
-            height: 200px;
-            overflow-y: auto;
-            padding-right: 12px;
-            margin: 14px 0 20px 0;
-            flex-grow: 1;
+            max-height: 175px !important;
+            height: 175px !important;
+            min-height: 175px !important;
+            overflow-y: auto !important;
+            padding-right: 12px !important;
+            margin: 8px 0 20px 0 !important;
             --scrollbar-thumb: var(--rama-orange);
             --scrollbar-track: rgba(0, 0, 0, 0.06);
             scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
@@ -328,13 +363,25 @@ add_action( 'wp_head', function() {
 
         .rama-scroll-panel p {
             margin-bottom: 12px !important;
-            font-size: 0.95rem !important;
+            font-size: 0.93rem !important;
             line-height: 1.65 !important;
             color: #334155 !important;
         }
 
+        /* Service Cards CTA Button - Sleek & Horizontally Aligned */
         .rama-service-card .elementor-widget-button {
             margin-top: auto !important;
+            padding-top: 8px !important;
+            margin-bottom: 0 !important;
+        }
+
+        .rama-service-card .elementor-button {
+            padding: 9px 22px !important;
+            font-size: 0.82rem !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.03em !important;
+            border-radius: 50px !important;
+            box-shadow: 0 3px 10px rgba(237, 108, 54, 0.22) !important;
         }
 
         /* 9. GRAB YOUR SPOT (SUBTLE BLACK FROSTED GLASS 00000) */
