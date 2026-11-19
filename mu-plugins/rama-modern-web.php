@@ -330,6 +330,7 @@ add_action( 'wp_head', function() {
         /* Equalize title height strictly across ALL 3 cards so scroll panels & buttons align 100% */
         .rama-services-section .rama-service-title,
         .rama-services-section .rama-service-card .elementor-widget-heading {
+            flex: 0 0 72px !important;
             height: 72px !important;
             min-height: 72px !important;
             max-height: 72px !important;
@@ -356,6 +357,15 @@ add_action( 'wp_head', function() {
             color: var(--rama-orange) !important;
         }
 
+        /* Fixed height for text editor widget container across all 3 cards */
+        .rama-services-section .elementor-widget-text-editor {
+            flex: 0 0 175px !important;
+            height: 175px !important;
+            min-height: 175px !important;
+            max-height: 175px !important;
+            margin-bottom: 20px !important;
+        }
+
         /* Scroll panel for service card text - identical fixed height */
         .rama-scroll-panel {
             max-height: 175px !important;
@@ -363,7 +373,7 @@ add_action( 'wp_head', function() {
             min-height: 175px !important;
             overflow-y: auto !important;
             padding-right: 12px !important;
-            margin: 0 0 16px 0 !important;
+            margin: 0 !important;
             --scrollbar-thumb: var(--rama-orange);
             --scrollbar-track: rgba(0, 0, 0, 0.06);
             scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
@@ -397,8 +407,8 @@ add_action( 'wp_head', function() {
         .rama-services-section .rama-service-btn,
         .rama-services-section .rama-service-card .elementor-widget-button {
             margin-top: auto !important;
-            padding-top: 8px !important;
             margin-bottom: 0 !important;
+            padding-top: 0 !important;
         }
 
         .rama-services-section .rama-service-btn .elementor-button,
@@ -701,7 +711,7 @@ add_action( 'wp_head', function() {
             }
         }
 
-        /* 11. MOBILE HEADER & LATERAL OFFCANVAS HAMBURGER MENU DRAWER */
+        /* 11. FULLSCREEN MOBILE OVERLAY MENU & ALL OPTIONS VISIBLE */
         @media (max-width: 1024px) {
             .elementor-location-header {
                 position: sticky !important;
@@ -786,55 +796,67 @@ add_action( 'wp_head', function() {
                 fill: currentColor !important;
             }
 
-            /* LATERAL OFFCANVAS DRAWER (Slides smoothly from right) */
+            /* TRUE FULLSCREEN MOBILE MENU MODAL (100vw x 100dvh) */
             .elementor-location-header .jkit-menu-wrapper {
                 position: fixed !important;
                 top: 0 !important;
-                right: -110% !important;
-                left: auto !important;
-                width: 82% !important;
-                max-width: 320px !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                width: 100vw !important;
+                max-width: 100vw !important;
+                min-width: 100vw !important;
                 height: 100vh !important;
                 height: 100dvh !important;
+                min-height: 100dvh !important;
                 background: #ffffff !important;
-                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.22) !important;
-                z-index: 999999 !important;
+                box-shadow: none !important;
+                z-index: 9999999 !important;
                 display: flex !important;
                 flex-direction: column !important;
                 justify-content: flex-start !important;
-                padding: 24px 20px 30px 20px !important;
+                padding: 20px 24px 36px 24px !important;
                 overflow-y: auto !important;
                 overflow-x: hidden !important;
-                transition: right 0.38s cubic-bezier(0.16, 1, 0.3, 1) !important;
-                border-top-left-radius: 20px !important;
-                border-bottom-left-radius: 20px !important;
+                -webkit-overflow-scrolling: touch !important;
+                border-radius: 0 !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                pointer-events: none !important;
+                transform: translateY(-8px) scale(0.99) !important;
+                transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s !important;
             }
 
-            /* Active State */
+            /* Active State: 100% Fullscreen Viewport */
             .elementor-location-header .jkit-menu-wrapper.active {
-                right: 0 !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+                transform: translateY(0) scale(1) !important;
             }
 
-            /* Drawer Top Header (Logo + Close Button) */
+            /* Fullscreen Menu Top Header Bar (Logo + Close Button) */
             .elementor-location-header .jkit-nav-identity-panel {
                 display: flex !important;
                 align-items: center !important;
                 justify-content: space-between !important;
                 width: 100% !important;
-                padding-bottom: 18px !important;
-                margin-bottom: 16px !important;
+                padding-bottom: 16px !important;
+                margin-bottom: 20px !important;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
                 order: 1 !important;
+                flex-shrink: 0 !important;
             }
 
             .elementor-location-header .jkit-nav-identity-panel .jkit-nav-site-title {
-                display: block !important;
+                display: flex !important;
+                align-items: center !important;
             }
 
             .elementor-location-header .jkit-nav-identity-panel .jkit-nav-logo {
-                display: inline-block !important;
-                width: 140px !important;
-                height: 40px !important;
+                display: block !important;
+                width: 150px !important;
+                height: 44px !important;
                 background-image: url('http://rama-caida.local/wp-content/uploads/2026/11/logo_orange_clean.webp') !important;
                 background-size: contain !important;
                 background-repeat: no-repeat !important;
@@ -846,13 +868,14 @@ add_action( 'wp_head', function() {
                 display: flex !important;
                 align-items: center !important;
                 justify-content: center !important;
-                width: 40px !important;
-                height: 40px !important;
+                width: 44px !important;
+                height: 44px !important;
                 border-radius: 50% !important;
                 background: rgba(237, 108, 54, 0.1) !important;
-                border: 1px solid rgba(237, 108, 54, 0.2) !important;
+                border: 1px solid rgba(237, 108, 54, 0.25) !important;
                 color: var(--rama-orange) !important;
-                font-size: 18px !important;
+                font-size: 22px !important;
+                font-weight: 700 !important;
                 cursor: pointer !important;
                 margin: 0 !important;
                 padding: 0 !important;
@@ -860,17 +883,20 @@ add_action( 'wp_head', function() {
                 transition: all 0.2s ease !important;
             }
 
-            .elementor-location-header .jkit-close-menu:hover {
+            .elementor-location-header .jkit-close-menu:hover,
+            .elementor-location-header .jkit-close-menu:active {
                 background: var(--rama-orange) !important;
                 color: #ffffff !important;
             }
 
-            /* Menu Links List */
+            /* Menu Links Container */
             .elementor-location-header .jkit-menu-container {
                 order: 2 !important;
                 width: 100% !important;
-                overflow-y: auto !important;
+                overflow-y: visible !important;
                 flex: 1 1 auto !important;
+                display: flex !important;
+                flex-direction: column !important;
             }
 
             .elementor-location-header ul.jkit-menu {
@@ -880,7 +906,7 @@ add_action( 'wp_head', function() {
                 list-style: none !important;
                 padding: 0 !important;
                 margin: 0 !important;
-                gap: 6px !important;
+                gap: 8px !important;
             }
 
             .elementor-location-header ul.jkit-menu > li.menu-item {
@@ -895,66 +921,113 @@ add_action( 'wp_head', function() {
                 display: flex !important;
                 align-items: center !important;
                 justify-content: space-between !important;
-                font-size: 1.12rem !important;
+                font-size: 1.22rem !important;
                 font-weight: 700 !important;
                 color: #0f172a !important;
                 padding: 14px 12px !important;
-                border-radius: 10px !important;
+                border-radius: 12px !important;
                 text-decoration: none !important;
                 transition: all 0.2s ease !important;
             }
 
-            .elementor-location-header ul.jkit-menu > li.menu-item > a:hover {
+            .elementor-location-header ul.jkit-menu > li.menu-item > a:hover,
+            .elementor-location-header ul.jkit-menu > li.menu-item > a:active {
                 background: rgba(237, 108, 54, 0.08) !important;
                 color: var(--rama-orange) !important;
             }
 
-            /* Sub-menu (Services) */
+            /* Sub-menu (Services) - ALWAYS VISIBLE & CLEARLY INDENTED */
             .elementor-location-header ul.jkit-menu .sub-menu {
-                background: rgba(248, 250, 252, 0.95) !important;
-                border-radius: 10px !important;
-                padding: 8px 12px 10px 16px !important;
-                margin: 4px 0 10px 0 !important;
-                list-style: none !important;
-                box-shadow: none !important;
+                display: flex !important;
+                flex-direction: column !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                max-height: none !important;
+                height: auto !important;
                 position: static !important;
+                background: #f8fafc !important;
+                border-left: 3px solid var(--rama-orange) !important;
+                border-radius: 0 12px 12px 0 !important;
+                padding: 8px 12px !important;
+                margin: 4px 0 14px 16px !important;
+                gap: 6px !important;
+                box-shadow: none !important;
+                list-style: none !important;
+            }
+
+            .elementor-location-header ul.jkit-menu .sub-menu li {
+                list-style: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
 
             .elementor-location-header ul.jkit-menu .sub-menu li a {
-                display: block !important;
-                padding: 9px 8px !important;
-                font-size: 0.95rem !important;
+                display: flex !important;
+                align-items: center !important;
+                padding: 10px 12px !important;
+                font-size: 1.02rem !important;
                 font-weight: 600 !important;
-                color: #475569 !important;
-                text-decoration: none !important;
+                color: #334155 !important;
                 border-radius: 8px !important;
+                text-decoration: none !important;
+                transition: all 0.2s ease !important;
             }
 
-            .elementor-location-header ul.jkit-menu .sub-menu li a:hover {
+            .elementor-location-header ul.jkit-menu .sub-menu li a::before {
+                content: "•" !important;
                 color: var(--rama-orange) !important;
-                background: rgba(237, 108, 54, 0.06) !important;
+                font-size: 1.2rem !important;
+                margin-right: 10px !important;
             }
 
-            /* Backdrop Overlay */
-            .elementor-location-header .jkit-overlay {
-                position: fixed !important;
-                top: 0 !important;
-                left: 0 !important;
-                right: 0 !important;
-                bottom: 0 !important;
-                background: rgba(15, 23, 42, 0.5) !important;
-                backdrop-filter: blur(4px) !important;
-                -webkit-backdrop-filter: blur(4px) !important;
-                z-index: 999990 !important;
-                opacity: 0 !important;
-                visibility: hidden !important;
-                transition: opacity 0.35s ease, visibility 0.35s ease !important;
+            .elementor-location-header ul.jkit-menu .sub-menu li a:hover,
+            .elementor-location-header ul.jkit-menu .sub-menu li a:active {
+                color: var(--rama-orange) !important;
+                background: rgba(237, 108, 54, 0.08) !important;
+                transform: translateX(4px) !important;
             }
 
-            .elementor-location-header .jkit-menu-wrapper.active ~ .jkit-overlay,
-            .elementor-location-header .jkit-overlay.active {
-                opacity: 1 !important;
-                visibility: visible !important;
+            /* Fullscreen Mobile Drawer Bottom CTA & Quick Contacts */
+            .rama-mobile-drawer-footer {
+                margin-top: 24px !important;
+                padding-top: 20px !important;
+                border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 14px !important;
+                width: 100% !important;
+            }
+
+            .rama-mobile-drawer-cta {
+                display: block !important;
+                width: 100% !important;
+                padding: 15px 24px !important;
+                background-color: var(--rama-orange) !important;
+                color: #ffffff !important;
+                font-size: 1rem !important;
+                font-weight: 700 !important;
+                letter-spacing: 0.05em !important;
+                text-align: center !important;
+                text-transform: uppercase !important;
+                text-decoration: none !important;
+                border-radius: 50px !important;
+                box-shadow: 0 4px 14px rgba(237, 108, 54, 0.35) !important;
+                transition: all 0.25s ease !important;
+            }
+
+            .rama-mobile-drawer-cta:hover,
+            .rama-mobile-drawer-cta:active {
+                background-color: var(--rama-mango) !important;
+                transform: translateY(-2px) !important;
+            }
+
+            .rama-mobile-drawer-info {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 6px !important;
+                font-size: 0.88rem !important;
+                color: #64748b !important;
+                text-align: center !important;
             }
         }
 
@@ -991,27 +1064,57 @@ add_action( 'wp_head', function() {
     </style>
     <script id="rama-caida-mobile-nav-js">
         document.addEventListener('DOMContentLoaded', function() {
-            // Close mobile offcanvas when tapping overlay
-            document.body.addEventListener('click', function(e) {
-                if (e.target && (e.target.matches('.jkit-overlay') || e.target.closest('.jkit-close-menu'))) {
-                    var wrapper = document.querySelector('.elementor-location-header .jkit-menu-wrapper');
-                    var overlay = document.querySelector('.elementor-location-header .jkit-overlay');
-                    if (wrapper) wrapper.classList.remove('active');
-                    if (overlay) overlay.classList.remove('active');
-                }
-            });
-
-            // Ensure backdrop overlay activates when hamburger opens
+            var wrapper = document.querySelector('.elementor-location-header .jkit-menu-wrapper');
             var hamburger = document.querySelector('.elementor-location-header .jkit-hamburger-menu');
+            var closeBtn = document.querySelector('.elementor-location-header .jkit-close-menu');
+            var menuContainer = document.querySelector('.elementor-location-header .jkit-menu-container');
+
+            // Inject bottom CTA into mobile menu container if not already present
+            if (menuContainer && !menuContainer.querySelector('.rama-mobile-drawer-footer')) {
+                var footer = document.createElement('div');
+                footer.className = 'rama-mobile-drawer-footer';
+                footer.innerHTML = '<a href="/contact-us/" class="rama-mobile-drawer-cta">GET IN TOUCH</a><div class="rama-mobile-drawer-info"><span>📍 Doral, Florida</span><span>✉️ info@ramacaida.com</span></div>';
+                menuContainer.appendChild(footer);
+            }
+
+            function openMobileMenu() {
+                if (wrapper) {
+                    wrapper.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    document.documentElement.style.overflow = 'hidden';
+                }
+            }
+
+            function closeMobileMenu() {
+                if (wrapper) {
+                    wrapper.classList.remove('active');
+                    document.body.style.overflow = '';
+                    document.documentElement.style.overflow = '';
+                }
+            }
+
             if (hamburger) {
-                hamburger.addEventListener('click', function() {
-                    setTimeout(function() {
-                        var wrapper = document.querySelector('.elementor-location-header .jkit-menu-wrapper');
-                        var overlay = document.querySelector('.elementor-location-header .jkit-overlay');
-                        if (wrapper && wrapper.classList.contains('active') && overlay) {
-                            overlay.classList.add('active');
-                        }
-                    }, 50);
+                hamburger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    openMobileMenu();
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    closeMobileMenu();
+                });
+            }
+
+            // Close on clicking any navigation link
+            if (wrapper) {
+                wrapper.addEventListener('click', function(e) {
+                    if (e.target.closest('a')) {
+                        closeMobileMenu();
+                    }
                 });
             }
         });
