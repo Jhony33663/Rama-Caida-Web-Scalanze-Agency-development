@@ -589,8 +589,8 @@ add_action( 'wp_head', function() {
         .rama-portfolio-carousel img,
         .rama-portfolio-carousel .swiper-slide-image {
             width: 100% !important;
-            height: 290px !important;
-            aspect-ratio: 4 / 3 !important;
+            height: 380px !important;
+            aspect-ratio: 3 / 4 !important;
             object-fit: cover !important;
             object-position: center !important;
             display: block !important;
@@ -680,14 +680,16 @@ add_action( 'wp_head', function() {
             }
             .rama-portfolio-carousel img,
             .rama-portfolio-carousel .swiper-slide-image {
-                height: 260px !important;
+                height: 340px !important;
+                aspect-ratio: 3 / 4 !important;
             }
         }
 
         @media (max-width: 767px) {
             .rama-portfolio-carousel img,
             .rama-portfolio-carousel .swiper-slide-image {
-                height: 230px !important;
+                height: 310px !important;
+                aspect-ratio: 3 / 4 !important;
             }
             .rama-portfolio-carousel .elementor-swiper-button {
                 width: 40px !important;
@@ -699,7 +701,264 @@ add_action( 'wp_head', function() {
             }
         }
 
-        /* 7. Mobile / Tablet Responsive Resets */
+        /* 11. MOBILE HEADER & LATERAL OFFCANVAS HAMBURGER MENU DRAWER */
+        @media (max-width: 1024px) {
+            .elementor-location-header {
+                position: sticky !important;
+                top: 0 !important;
+                z-index: 99999 !important;
+                padding: 10px 18px !important;
+                width: 100% !important;
+            }
+
+            .elementor-location-header .elementor-element-239e92cf,
+            .elementor-location-header .elementor-container,
+            .elementor-location-header .e-con {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* Logo */
+            .elementor-location-header .elementor-element-5ff7ee21 {
+                flex: 0 0 auto !important;
+                display: flex !important;
+                align-items: center !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .elementor-location-header .elementor-element-19349cb8 img {
+                max-height: 44px !important;
+                width: auto !important;
+                height: auto !important;
+                object-fit: contain !important;
+            }
+
+            /* Right nav & controls */
+            .elementor-location-header .elementor-element-7bd7624a {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: flex-end !important;
+                gap: 12px !important;
+                flex: 0 0 auto !important;
+                margin: 0 !important;
+            }
+
+            .elementor-location-header .elementor-element-279bfdbc {
+                display: none !important;
+            }
+
+            /* Clean Hamburger Button */
+            .elementor-location-header .jkit-hamburger-menu {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 44px !important;
+                height: 44px !important;
+                background: rgba(237, 108, 54, 0.08) !important;
+                border: 1.5px solid rgba(237, 108, 54, 0.25) !important;
+                border-radius: 12px !important;
+                cursor: pointer !important;
+                padding: 0 !important;
+                color: var(--rama-orange) !important;
+                transition: all 0.25s ease !important;
+            }
+
+            .elementor-location-header .jkit-hamburger-menu:hover,
+            .elementor-location-header .jkit-hamburger-menu:active {
+                background: var(--rama-orange) !important;
+                color: #ffffff !important;
+                border-color: var(--rama-orange) !important;
+            }
+
+            .elementor-location-header .jkit-hamburger-menu i,
+            .elementor-location-header .jkit-hamburger-menu svg {
+                font-size: 22px !important;
+                width: 22px !important;
+                height: 22px !important;
+                fill: currentColor !important;
+            }
+
+            /* LATERAL OFFCANVAS DRAWER (Slides smoothly from right) */
+            .elementor-location-header .jkit-menu-wrapper {
+                position: fixed !important;
+                top: 0 !important;
+                right: -110% !important;
+                left: auto !important;
+                width: 82% !important;
+                max-width: 320px !important;
+                height: 100vh !important;
+                height: 100dvh !important;
+                background: #ffffff !important;
+                box-shadow: -10px 0 40px rgba(0, 0, 0, 0.22) !important;
+                z-index: 999999 !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: flex-start !important;
+                padding: 24px 20px 30px 20px !important;
+                overflow-y: auto !important;
+                overflow-x: hidden !important;
+                transition: right 0.38s cubic-bezier(0.16, 1, 0.3, 1) !important;
+                border-top-left-radius: 20px !important;
+                border-bottom-left-radius: 20px !important;
+            }
+
+            /* Active State */
+            .elementor-location-header .jkit-menu-wrapper.active {
+                right: 0 !important;
+            }
+
+            /* Drawer Top Header (Logo + Close Button) */
+            .elementor-location-header .jkit-nav-identity-panel {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                width: 100% !important;
+                padding-bottom: 18px !important;
+                margin-bottom: 16px !important;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+                order: 1 !important;
+            }
+
+            .elementor-location-header .jkit-nav-identity-panel .jkit-nav-site-title {
+                display: block !important;
+            }
+
+            .elementor-location-header .jkit-nav-identity-panel .jkit-nav-logo {
+                display: inline-block !important;
+                width: 140px !important;
+                height: 40px !important;
+                background-image: url('http://rama-caida.local/wp-content/uploads/2026/11/logo_orange_clean.webp') !important;
+                background-size: contain !important;
+                background-repeat: no-repeat !important;
+                background-position: left center !important;
+            }
+
+            /* Close Button */
+            .elementor-location-header .jkit-close-menu {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 40px !important;
+                height: 40px !important;
+                border-radius: 50% !important;
+                background: rgba(237, 108, 54, 0.1) !important;
+                border: 1px solid rgba(237, 108, 54, 0.2) !important;
+                color: var(--rama-orange) !important;
+                font-size: 18px !important;
+                cursor: pointer !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                float: none !important;
+                transition: all 0.2s ease !important;
+            }
+
+            .elementor-location-header .jkit-close-menu:hover {
+                background: var(--rama-orange) !important;
+                color: #ffffff !important;
+            }
+
+            /* Menu Links List */
+            .elementor-location-header .jkit-menu-container {
+                order: 2 !important;
+                width: 100% !important;
+                overflow-y: auto !important;
+                flex: 1 1 auto !important;
+            }
+
+            .elementor-location-header ul.jkit-menu {
+                display: flex !important;
+                flex-direction: column !important;
+                width: 100% !important;
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                gap: 6px !important;
+            }
+
+            .elementor-location-header ul.jkit-menu > li.menu-item {
+                width: 100% !important;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+                list-style: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .elementor-location-header ul.jkit-menu > li.menu-item > a {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                font-size: 1.12rem !important;
+                font-weight: 700 !important;
+                color: #0f172a !important;
+                padding: 14px 12px !important;
+                border-radius: 10px !important;
+                text-decoration: none !important;
+                transition: all 0.2s ease !important;
+            }
+
+            .elementor-location-header ul.jkit-menu > li.menu-item > a:hover {
+                background: rgba(237, 108, 54, 0.08) !important;
+                color: var(--rama-orange) !important;
+            }
+
+            /* Sub-menu (Services) */
+            .elementor-location-header ul.jkit-menu .sub-menu {
+                background: rgba(248, 250, 252, 0.95) !important;
+                border-radius: 10px !important;
+                padding: 8px 12px 10px 16px !important;
+                margin: 4px 0 10px 0 !important;
+                list-style: none !important;
+                box-shadow: none !important;
+                position: static !important;
+            }
+
+            .elementor-location-header ul.jkit-menu .sub-menu li a {
+                display: block !important;
+                padding: 9px 8px !important;
+                font-size: 0.95rem !important;
+                font-weight: 600 !important;
+                color: #475569 !important;
+                text-decoration: none !important;
+                border-radius: 8px !important;
+            }
+
+            .elementor-location-header ul.jkit-menu .sub-menu li a:hover {
+                color: var(--rama-orange) !important;
+                background: rgba(237, 108, 54, 0.06) !important;
+            }
+
+            /* Backdrop Overlay */
+            .elementor-location-header .jkit-overlay {
+                position: fixed !important;
+                top: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                background: rgba(15, 23, 42, 0.5) !important;
+                backdrop-filter: blur(4px) !important;
+                -webkit-backdrop-filter: blur(4px) !important;
+                z-index: 999990 !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                transition: opacity 0.35s ease, visibility 0.35s ease !important;
+            }
+
+            .elementor-location-header .jkit-menu-wrapper.active ~ .jkit-overlay,
+            .elementor-location-header .jkit-overlay.active {
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+        }
+
+        /* 12. Mobile / Tablet Responsive Resets */
         @media (max-width: 1024px) {
             .elementor-section, 
             .e-con,
@@ -709,12 +968,6 @@ add_action( 'wp_head', function() {
                 margin-bottom: 0 !important;
                 padding-left: 16px !important;
                 padding-right: 16px !important;
-            }
-
-            .elementor-location-header {
-                margin-top: 0 !important;
-                margin-bottom: 0 !important;
-                padding: 12px 16px !important;
             }
 
             .rama-hero-card {
@@ -736,5 +989,32 @@ add_action( 'wp_head', function() {
             }
         }
     </style>
+    <script id="rama-caida-mobile-nav-js">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Close mobile offcanvas when tapping overlay
+            document.body.addEventListener('click', function(e) {
+                if (e.target && (e.target.matches('.jkit-overlay') || e.target.closest('.jkit-close-menu'))) {
+                    var wrapper = document.querySelector('.elementor-location-header .jkit-menu-wrapper');
+                    var overlay = document.querySelector('.elementor-location-header .jkit-overlay');
+                    if (wrapper) wrapper.classList.remove('active');
+                    if (overlay) overlay.classList.remove('active');
+                }
+            });
+
+            // Ensure backdrop overlay activates when hamburger opens
+            var hamburger = document.querySelector('.elementor-location-header .jkit-hamburger-menu');
+            if (hamburger) {
+                hamburger.addEventListener('click', function() {
+                    setTimeout(function() {
+                        var wrapper = document.querySelector('.elementor-location-header .jkit-menu-wrapper');
+                        var overlay = document.querySelector('.elementor-location-header .jkit-overlay');
+                        if (wrapper && wrapper.classList.contains('active') && overlay) {
+                            overlay.classList.add('active');
+                        }
+                    }, 50);
+                });
+            }
+        });
+    </script>
     <?php
 }, 100 );

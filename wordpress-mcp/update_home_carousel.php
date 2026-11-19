@@ -301,18 +301,18 @@ $p6_sections[] = make_section([
     'padding' => ['unit' => 'px', 'top' => '100', 'right' => '20', 'bottom' => '100', 'left' => '20', 'isLinked' => false]
 ]);
 
-// 5. PORTFOLIO - CAROUSEL BLOCK (100% Curated, Existing Drive WebP Images)
+// 5. PORTFOLIO - CAROUSEL BLOCK (100% Curated Vertical/Portrait Photos)
 $portfolio_images = [
-    get_drive_img('bon-o-bon-03', $webp_map),
-    get_drive_img('colcafe-02', $webp_map),
-    get_drive_img('santo-domingo-03', $webp_map),
-    get_drive_img('bon-o-bon-07', $webp_map),
-    get_drive_img('sello-rojo-01', $webp_map),
-    get_drive_img('bon-o-bon-10', $webp_map),
-    get_drive_img('santo-domingo-07', $webp_map),
-    get_drive_img('buen-dia-02', $webp_map),
-    get_drive_img('colcafe-01', $webp_map),
-    get_drive_img('bon-o-bon-02', $webp_map),
+    get_drive_img('bon-o-bon-07', $webp_map),      // Vertical 768x1024 (3:4)
+    get_drive_img('colcafe-02', $webp_map),        // Vertical 1125x1477 (3:4)
+    get_drive_img('santo-domingo-03', $webp_map),  // Vertical 1200x1600 (3:4)
+    get_drive_img('sello-rojo-01', $webp_map),     // Vertical 1125x1481 (3:4)
+    get_drive_img('bon-o-bon-10', $webp_map),      // Vertical 1200x1600 (3:4)
+    get_drive_img('santo-domingo-07', $webp_map),  // Vertical 1920x2560 (3:4)
+    get_drive_img('buen-dia-02', $webp_map),       // Vertical 960x1280 (3:4)
+    get_drive_img('colcafe-03', $webp_map),        // Vertical 1125x1442 (3:4)
+    get_drive_img('bon-o-bon-01', $webp_map),      // Vertical 768x1024 (3:4)
+    get_drive_img('sello-rojo-02', $webp_map),     // Vertical 1125x1476 (3:4)
 ];
 
 $portfolio_widgets = [
